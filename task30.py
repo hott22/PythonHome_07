@@ -8,6 +8,7 @@ dir_name_list = ['video', 'music', 'images', 'docs']
 foto_expansion = ['jpg', 'jpeg', 'png']
 music_expansion = ['mp3', 'wav']
 docs_expansion = ['doc', 'txt', 'odt']
+video_expansion = ['mp4', 'mov']
 
 
 def dir_sort(name_list: list[str], images: list[str], music: list[str], video: list[str], docs: list[str]) -> None:
@@ -27,3 +28,6 @@ def dir_sort(name_list: list[str], images: list[str], music: list[str], video: l
         elif file_.split('.')[1] in docs:
             os.replace(file_, os.path.join(os.getcwd(), 'docs', file_))
 
+
+if __name__ == '__main__':
+    dir_sort(dir_name_list, foto_expansion, music_expansion, video_expansion, docs_expansion)
